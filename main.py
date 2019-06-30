@@ -1,23 +1,31 @@
 import nltk
-nltk.corpus.indian.words('hindi.pos')
 from nltk.corpus import PlaintextCorpusReader
 from nltk.tokenize import WhitespaceTokenizer
-# from matplotlib import rcParams
-# rcParams['font.family'] = 'sans-serif'
-# rcParams['font.sans-serif'] = ['Hind']
+from nltk.tokenize import regexp_tokenize, wordpunct_tokenize, blankline_tokenize
 
-corpus_root = '/Users/mirandadayadkins/Desktop/Corpi'
+nltk.corpus.indian.words('hindi.pos')
+
+
+corpus_root = '/Users/mirandadayadkins/Desktop/Premchand/Premchand'
 wordlists = PlaintextCorpusReader(corpus_root, '.*')
 
 string_text = wordlists.raw('Premchand.txt')
 
 tokens = WhitespaceTokenizer().tokenize(wordlists.raw('Premchand.txt'))
+tokens = wordpunct_tokenize(wordlists.raw('Premchand.txt'))
 
 w_tokens = [w for w in tokens if w.isalpha()]
 
-print(sorted(set(w_tokens))[:30])
+# print(sorted(set(w_tokens))[:30])
 
 text = nltk.Text(w_tokens)
 
-text.dispersion_plot(["अऋण"])
+print(len(text))
+print(len(set(text)))
+# print(set(text))
+
+print(len(text.collocation_list()))
+print(text.collocation_list())
+
+# text.dispersion_plot(["प्रेम", "प्यार"])
 
