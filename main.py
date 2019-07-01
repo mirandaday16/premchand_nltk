@@ -6,15 +6,15 @@ from nltk.tokenize import regexp_tokenize, wordpunct_tokenize, blankline_tokeniz
 nltk.corpus.indian.words('hindi.pos')
 
 
-corpus_root = '/Users/mirandadayadkins/Desktop/Premchand/Premchand'
+corpus_root = '.'
 wordlists = PlaintextCorpusReader(corpus_root, '.*')
 
 string_text = wordlists.raw('Premchand.txt')
 
 tokens = WhitespaceTokenizer().tokenize(wordlists.raw('Premchand.txt'))
-tokens = wordpunct_tokenize(wordlists.raw('Premchand.txt'))
+# tokens = wordpunct_tokenize(tokens)
 
-w_tokens = [w for w in tokens if w.isalpha()]
+w_tokens = [w for w in tokens] # if w.isalpha()]
 
 # print(sorted(set(w_tokens))[:30])
 
@@ -27,5 +27,5 @@ print(len(set(text)))
 print(len(text.collocation_list()))
 print(text.collocation_list())
 
-# text.dispersion_plot(["प्रेम", "प्यार"])
+text.dispersion_plot(["दलित", "बलात्कार", "ज़मींदार", "महिला", "औरत", "ग्रामीण", "गाँव", "किसान", "गाय", "भेंस", "शहर"])
 
