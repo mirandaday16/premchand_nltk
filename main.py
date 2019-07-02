@@ -24,20 +24,20 @@ print("Total words in corpus: ", len(text))
 print("Total unique vocabulary words: ", len(set(text)))
 
 
-# # Looking at collocations
-# print("Number of collocations: ", len(text.collocation_list()))
-# for w in text.collocation_list():
-#     print(w)
-# print("Collocations are almost all multi-word verb constructions,"
-#       "two-part names, or names/titles followed by honorifics")
+# Looking at collocations
+print("Number of collocations: ", len(text.collocation_list()))
+for w in text.collocation_list():
+    print(w)
+print("Collocations are almost all multi-word verb constructions,"
+      "two-part names, or names/titles followed by honorifics")
 
 
 # Looking at frequently distributed words
-# f_dist = FreqDist(text)
-# f_dist_list = f_dist.most_common(1000)
-# for w in f_dist_list:
-#     if len(w[0]) > 6:
-#         print(w[0], "occurs", w[1], "times."
+f_dist = FreqDist(text)
+f_dist_list = f_dist.most_common(1000)
+for w in f_dist_list:
+    if len(w[0]) > 6:
+        print(w[0], "occurs", w[1], "times."
 
 # Dispersion plot of most frequent content words:
 text.dispersion_plot(["विश्वास", "प्रसन्न", "बुढ़िया", "स्वीकार", "मुश्किल", "बिरादरी", "मुस्कराकर",
