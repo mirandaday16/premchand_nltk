@@ -190,6 +190,7 @@ Here is a dispersion plot of these frequently-appearing content words:
 
 ![High Frequency](Disp_Plot_High Frequency.png)
 
+
 Interestingly, I found that the word “दारोग़ा,” although it occurs with high frequency in the corpus, is actually only found in one of the chosen works (the novel ग़बन).
 
   
@@ -197,14 +198,17 @@ Interestingly, I found that the word “दारोग़ा,” although it oc
 
 Other dispersion plots also yielded interesting results:
 ![Women](Disp_Plot_Women.png)
+
 This dispersion plot analyzed Premchand’s use of words to describe women. An interesting distinction is his use of “महिला” vs. “औरत” -- Premchand seems to prefer the no-nonsense, mundane “औरत” over its sweeter, more polite counterpart. Similarly, he seems to favor the more everyday “पत्नी” to the slightly nicer “बीवी.” It is also worth noting that his use of “बेचारी” dropped significantly after his early works, as he became more adept in writing about the issues of poor and marginalized communities without simply looking upon them with pity.
 
   
   
 ![Social](Disp_Plot_Social.png)
+
 This plot analyzed the changes in Premchand’s use of vocabulary related to social issues over time. It is worth noting that his use of words such as “गाँव,” “किसान,” and “गाय” increased greatly in his later work, when he began to focus more on the issues of the rural poor. Words which remain prevalent throughout the corpus are, unsurprisingly, “धर्म/धार्मिक,” “अधिकार,” and “न्याय/अन्याय.” Out of curiosity, I also searched for “America” in the corpus, and was intrigued to find its use limited to the first half of the texts.
 
   
   
 ![Places](Disp_Plot_Places.png)
+
 This dispersion plot of mentioned place names was primarily an attempt to see if Premchand’s own geographical location had much effect on his writing (He moved from Banaras to Kanpur at age 25, then later to Gorakhpur before retiring back in Banaras). This plot is sparse, likely because the place names chosen are of large towns and cities and Premchand’s work usually focused more on rural life. However, it is interesting to note that Premchand mentioned Banaras, his hometown, more frequently in the first half of his career, and seemed to feature the nearby city of Lucknow more often in his later works. The small cluster of mentions of Kolkata corresponds roughly to his novel, “Nirmala.”
