@@ -1,7 +1,10 @@
 import nltk
 from nltk.corpus import PlaintextCorpusReader
 from nltk.tokenize import WhitespaceTokenizer
-from nltk.tokenize import regexp_tokenize, wordpunct_tokenize, blankline_tokenize
+import matplotlib.pyplot as plt
+
+y_font = {'fontname': 'Devanagari Sangam MN'}
+plt.yticks(**y_font)
 
 nltk.corpus.indian.words('hindi.pos')
 
@@ -12,20 +15,18 @@ wordlists = PlaintextCorpusReader(corpus_root, '.*')
 string_text = wordlists.raw('Premchand.txt')
 
 tokens = WhitespaceTokenizer().tokenize(wordlists.raw('Premchand.txt'))
-# tokens = wordpunct_tokenize(tokens)
-
-w_tokens = [w for w in tokens] # if w.isalpha()]
-
-# print(sorted(set(w_tokens))[:30])
-
+w_tokens = [w for w in tokens]
 text = nltk.Text(w_tokens)
 
-print(len(text))
-print(len(set(text)))
+print("Total words in corpus: ", len(text))
+print("Total unique vocabulary words: ", len(set(text)))
 # print(set(text))
 
-print(len(text.collocation_list()))
-print(text.collocation_list())
+print("Number of collocations: ", len(text.collocation_list()))
+for w in text.collocation_list():
+    print(w)
 
-text.dispersion_plot(["दलित", "बलात्कार", "ज़मींदार", "महिला", "औरत", "ग्रामीण", "गाँव", "किसान", "गाय", "भेंस", "शहर"])
+# text.dispersion_plot(["महिला", "औरत"])
+
+text.dispersion_plot(["गाँव", "किसान", "गाय"])
 
