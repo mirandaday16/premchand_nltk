@@ -37,7 +37,7 @@ f_dist = FreqDist(text)
 f_dist_list = f_dist.most_common(1000)
 for w in f_dist_list:
     if len(w[0]) > 6:
-        print(w[0], "occurs", w[1], "times."
+        print(w[0], "occurs", w[1], "times.")
 
 # Dispersion plot of most frequent content words:
 text.dispersion_plot(["विश्वास", "प्रसन्न", "बुढ़िया", "स्वीकार", "मुश्किल", "बिरादरी", "मुस्कराकर",
