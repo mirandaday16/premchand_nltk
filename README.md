@@ -188,7 +188,7 @@ Another NLTK tool utilized in this project was FreqDist(). The code queries the 
 
 Here is a dispersion plot of these frequently-appearing content words:
 
-![High Frequency](Disp_Plot_High Frequency.png)
+![High Frequency](Disp_Plot_High_Frequency.png)
 
 
 Interestingly, I found that the word “दारोग़ा,” although it occurs with high frequency in the corpus, is actually only found in one of the chosen works (the novel ग़बन).
